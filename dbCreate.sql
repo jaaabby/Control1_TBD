@@ -6,8 +6,16 @@ CREATE TABLE Direccion
 	comuna varchar(80) NOT NULL,
 	calle varchar(80) NOT NULL,
 	numero int NOT NULL,
-	casa_dpto int(80),
+	casa_dpto int,
 	referencia varchar(80)
+);
+
+-- Tabla Medio_transporte
+CREATE TABLE Medio_transporte
+(
+    	ID_transporte serial PRIMARY KEY,
+    	tipo varchar(80) NOT NULL,
+    	patente varchar(80) unique
 );
 
 -- Tabla Repartidor
@@ -47,7 +55,7 @@ CREATE TABLE Pedido (
     fecha_pedido date NOT NULL,
     precio int NOT NULL,
     rut_rep varchar(10) unique NOT NULL,
-    rut_cliente varchar(10) unique NOT NULL,
+    rut_cli varchar(10) unique NOT NULL,
     FOREIGN KEY (rut_rep) REFERENCES Repartidor(RUT_rep),
     FOREIGN KEY (rut_cli) REFERENCES Cliente(RUT_cli)
 );
@@ -61,14 +69,6 @@ CREATE TABLE Producto
     	descripcion varchar(80),
     	rut_compañia varchar(10) unique NOT NULL,
     	FOREIGN KEY (rut_compañia) REFERENCES Compañia(RUT_compañia)
-);
-
--- Tabla Medio_transporte
-CREATE TABLE Medio_transporte
-(
-    	ID_transporte serial PRIMARY KEY,
-    	tipo varchar(80) NOT NULL,
-    	patente varchar(80) unique
 );
 
 -- Tabla Venta_detalle
