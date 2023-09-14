@@ -36,3 +36,9 @@ INSERT INTO public.Compañia(RUT_compañia,nombre_compañia,id_direccion) VALUES
 INSERT INTO public.Compañia(RUT_compañia,nombre_compañia,id_direccion) VALUES ('75981423-7','Buen Sabor',3);
 INSERT INTO public.Compañia(RUT_compañia,nombre_compañia,id_direccion) VALUES ('78236795-6','PizzaYa',4);
 INSERT INTO public.Compañia(RUT_compañia,nombre_compañia,id_direccion) VALUES ('77987412-3','Dulce tentación',5);
+
+INSERT INTO public.Cliente(RUT_cli,nombre_cli,apellido_cli,telefono,correo,id_direccion) VALUES ('17251963-4','Sofia','Martinez',987456321,'sofia.martinez@gmail.com',6);
+INSERT INTO public.Cliente(RUT_cli,nombre_cli,apellido_cli,telefono,correo,id_direccion) VALUES ('16598471-2','Alejandro','Rodriguez',932659874,'alejandro.rodriguez@gmail.com',7);
+INSERT INTO public.Cliente(RUT_cli,nombre_cli,apellido_cli,telefono,correo,id_direccion) VALUES ('15982134-6','Valentina','Gonzalez',975981423,'valentina.gonzalez@gmail.com',8);
+INSERT INTO public.Cliente(RUT_cli,nombre_cli,apellido_cli,telefono,correo,id_direccion) VALUES ('18236795-8','Juan Carlos','Lopez',948236795,'jcarlos.lopez@gmail.com',9);
+INSERT INTO public.Cliente(RUT_cli,nombre_cli,apellido_cli,telefono,correo,id_direccion) VALUES ('20987412-k','Gabriela','Fernandez',963987412,'gabriela.fernandez@gmail.com',10);

@@ -24,7 +24,7 @@ CREATE TABLE Repartidor
 	RUT_rep varchar(10) PRIMARY KEY,
 	nombre_rep varchar(80) NOT NULL,
 	apellido_rep varchar(80) NOT NULL,
-	telefono_rep int NOT NULL,
+	telefono_rep bigint NOT NULL,
 	id_transporte serial unique NOT NULL,
 	FOREIGN KEY (id_transporte) REFERENCES Medio_transporte(ID_transporte)
 );
