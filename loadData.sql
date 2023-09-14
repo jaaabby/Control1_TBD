@@ -30,3 +30,9 @@ INSERT INTO public.Repartidor(RUT_rep,nombre_rep,apellido_rep,telefono_rep,id_tr
 INSERT INTO public.Repartidor(RUT_rep,nombre_rep,apellido_rep,telefono_rep,id_transporte) VALUES ('19842136-0','Miguel','Gonzalez',954678231,8);
 INSERT INTO public.Repartidor(RUT_rep,nombre_rep,apellido_rep,telefono_rep,id_transporte) VALUES ('16321459-8','Carmen','Torres',912345678,9);
 INSERT INTO public.Repartidor(RUT_rep,nombre_rep,apellido_rep,telefono_rep,id_transporte) VALUES ('12459683-7','Jorge','Ramirez',998765432,10);
+
+INSERT INTO public.Compañia(RUT_compañia,nombre_compañia,id_direccion) VALUES ('77456321-9','Val Sandwich',1);
+INSERT INTO public.Compañia(RUT_compañia,nombre_compañia,id_direccion) VALUES ('72659874-0','SushiBom',2);
+INSERT INTO public.Compañia(RUT_compañia,nombre_compañia,id_direccion) VALUES ('75981423-7','Buen Sabor',3);
+INSERT INTO public.Compañia(RUT_compañia,nombre_compañia,id_direccion) VALUES ('78236795-6','PizzaYa',4);
+INSERT INTO public.Compañia(RUT_compañia,nombre_compañia,id_direccion) VALUES ('77987412-3','Dulce tentación',5);

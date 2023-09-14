@@ -33,7 +33,7 @@ CREATE TABLE Repartidor
 CREATE TABLE Compañia
 (
 	RUT_compañia varchar(10) PRIMARY KEY,
-    	nombre_compañia varchar(80),
+    	nombre_compañia varchar(80) NOT NULL,
     	id_direccion serial unique NOT NULL,
     	FOREIGN KEY (id_direccion) REFERENCES Direccion(ID_direccion)
 );
