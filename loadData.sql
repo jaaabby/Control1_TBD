@@ -42,3 +42,12 @@ INSERT INTO public.Cliente(RUT_cli,nombre_cli,apellido_cli,telefono,correo,id_di
 INSERT INTO public.Cliente(RUT_cli,nombre_cli,apellido_cli,telefono,correo,id_direccion) VALUES ('15982134-6','Valentina','Gonzalez',975981423,'valentina.gonzalez@gmail.com',8);
 INSERT INTO public.Cliente(RUT_cli,nombre_cli,apellido_cli,telefono,correo,id_direccion) VALUES ('18236795-8','Juan Carlos','Lopez',948236795,'jcarlos.lopez@gmail.com',9);
 INSERT INTO public.Cliente(RUT_cli,nombre_cli,apellido_cli,telefono,correo,id_direccion) VALUES ('20987412-k','Gabriela','Fernandez',963987412,'gabriela.fernandez@gmail.com',10);
+
+
+INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('20/05/2023',5.990,'11283564-9','17251963-4');
+INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('15/09/2023',15.400,'16987451-2','16598471-2');
+INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('26/04/2023',8.990,'17631894-k','15982134-6');
+INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('08/11/2023',22.300,'19842136-0','18236795-8');
+INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('07/06/2023',6.900,'16321459-8','20987412-k');
+
+
