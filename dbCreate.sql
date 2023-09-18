@@ -65,8 +65,8 @@ CREATE TABLE Producto
 (
     	ID_producto serial PRIMARY KEY,
     	nombre_prod varchar(80) NOT NULL,
+		descripcion varchar(80),
     	precio_unitario float NOT NULL,
-    	descripcion varchar(80),
     	rut_compañia varchar(10) unique NOT NULL,
     	FOREIGN KEY (rut_compañia) REFERENCES Compañia(RUT_compañia)
 );
