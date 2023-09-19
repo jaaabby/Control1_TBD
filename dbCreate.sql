@@ -45,7 +45,7 @@ CREATE TABLE Cliente (
     apellido_cli varchar(80) NOT NULL,
     telefono bigint NOT NULL,
     correo varchar(80),
-    id_direccion serial unique NOT NULL,
+    id_direccion serial NOT NULL,
     FOREIGN KEY (id_direccion) REFERENCES Direccion(ID_direccion)
 );
 
@@ -54,8 +54,8 @@ CREATE TABLE Pedido (
     ID_pedido serial PRIMARY KEY,
     fecha_pedido date NOT NULL,
     precio int NOT NULL,
-    rut_rep varchar(10) unique NOT NULL,
-    rut_cli varchar(10) unique NOT NULL,
+    rut_rep varchar(10) NOT NULL,
+    rut_cli varchar(10) NOT NULL,
     FOREIGN KEY (rut_rep) REFERENCES Repartidor(RUT_rep),
     FOREIGN KEY (rut_cli) REFERENCES Cliente(RUT_cli)
 );
@@ -66,8 +66,8 @@ CREATE TABLE Producto
     	ID_producto serial PRIMARY KEY,
     	nombre_prod varchar(80) NOT NULL,
 		descripcion varchar(80),
-    	precio_unitario float NOT NULL,
-    	rut_compañia varchar(10) unique NOT NULL,
+    	precio_unitario int NOT NULL,
+    	rut_compañia varchar(10) NOT NULL,
     	FOREIGN KEY (rut_compañia) REFERENCES Compañia(RUT_compañia)
 );
 
@@ -84,8 +84,8 @@ CREATE TABLE Venta_detalle
 CREATE TABLE Venta_producto
 (
     	ID_VP serial PRIMARY KEY,
-    	id_producto serial unique NOT NULL,
-    	id_venta serial unique NOT NULL,
+    	id_producto serial NOT NULL,
+    	id_venta serial NOT NULL,
     	FOREIGN KEY (id_producto) REFERENCES Producto(ID_producto),
     	FOREIGN KEY (id_venta) REFERENCES Venta_detalle(ID_venta)
 );
