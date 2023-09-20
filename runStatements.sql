@@ -2,8 +2,8 @@
 SELECT DISTINCT ON (aux.nombre_compañia)
 aux.rut_cli,
 aux.nombre_compañia,
-COUNT () AS cantidad_pedidos
-FROM (SELECT  DISTINCT ON (P.id_pedido) 
+COUNT (*) AS cantidad_pedidos
+FROM (SELECT  DISTINCT ON (P.id_pedido) * 
     FROM
         Pedido AS P
         INNER JOIN Venta_detalle AS VD ON P.ID_pedido = VD.id_pedido
@@ -18,6 +18,7 @@ GROUP BY
 ORDER BY
     aux.nombre_compañia,
     cantidad_pedidos DESC;
+
 ---- sentencia 2
 SELECT DISTINCT ON (C.nombre_compañia)
     C.nombre_compañia,
