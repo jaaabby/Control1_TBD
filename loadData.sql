@@ -12,13 +12,13 @@ INSERT INTO public.Direccion(region, comuna, calle, numero) VALUES ('Maule','Tal
 INSERT INTO public.Direccion(region, comuna, calle, numero, referencia) VALUES ('Ñuble','Chillán','5 de Abril',824,'A dos casas de la iglesia'); --10
 INSERT INTO public.Direccion(region, comuna, calle, numero, referencia) VALUES ('Valparaíso','Viña del Mar','Avenida Libertad',123,'Frente al mar'); --11
 INSERT INTO public.Direccion(region, comuna, calle, numero) VALUES ('Antofagasta','Antofagasta','Bolívar',222); --12
-INSERT INTO public.Direccion(region, comuna, calle, numero) VALUES ('Araucanía','Temuco','Prat',111); --13
+INSERT INTO public.Direccion(region, comuna, calle, numero) VALUES ('Metropolitana','Providencia','Av Providencia',111); --13
 INSERT INTO public.Direccion(region, comuna, calle, numero, casa_dpto, referencia) VALUES ('Atacama','Copiapó','Arturo Prat',567,8,'Edificio Prat'); --14
 INSERT INTO public.Direccion(region, comuna, calle, numero, referencia) VALUES ('Metropolitana','Santiago','Alameda',789,'Cerca del metro'); --15
 INSERT INTO public.Direccion(region, comuna, calle, numero, referencia) VALUES ('Metropolitana','Santiago','Alameda',782,'Cerca del metro'); --16
 INSERT INTO public.Direccion(region, comuna, calle, numero) VALUES ('Biobío','Concepción','Arauco',456); --17
-INSERT INTO public.Direccion(region, comuna, calle, numero, casa_dpto, referencia) VALUES ('Valparaíso','Viña del Mar','Libertad',789,15,'Condominio del Mar'); --18
-INSERT INTO public.Direccion(region, comuna, calle, numero, casa_dpto, referencia) VALUES ('Araucanía','Temuco','Bulnes',111,3,'Departamento Plaza'); --19
+INSERT INTO public.Direccion(region, comuna, calle, numero, casa_dpto, referencia) VALUES ('Metropolitana','Santiago','Agustinas',789,15,'Condominio del Mar'); --18
+INSERT INTO public.Direccion(region, comuna, calle, numero, casa_dpto, referencia) VALUES ('Metropolitana','Providencia','Tobalaba',115,3,'Departamento Plaza'); --19
 INSERT INTO public.Direccion(region, comuna, calle, numero, referencia) VALUES ('Araucanía','Temuco','Bulnes',222,'Cerca del hospital'); --20
 INSERT INTO public.Direccion(region, comuna, calle, numero, casa_dpto, referencia) VALUES ('Magallanes','Punta Arenas','Magallanes',9876,2,'Casa cerca de la plaza'); --21
 INSERT INTO public.Direccion(region, comuna, calle, numero) VALUES ('Coquimbo','La Serena','Baquedano',123); --22
@@ -104,7 +104,7 @@ INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2022/05/
 INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2021/09/15'::date,15760,'16987451-2','17664556-2'); --12
 INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2020/04/26'::date,5590,'17631894-k','19384383-6'); --13
 INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2019/11/08'::date,12650,'20185746-2','21837463-0'); --14
-INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2019/06/07'::date,5420,'20185746-2','21837463-0'); --15
+INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2019/06/07'::date,5420,'10765644-7','19384383-6'); --15
 
 -- POBLADO PRODUCTOS ---------------------------------
 --1)Val Sandwich ----------------------------
