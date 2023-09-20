@@ -1,4 +1,23 @@
---sentencia 4
+---- sentencia 3
+SELECT comuna, tipo_transporte AS transporte_mas_usado, cantidad_pedidos
+FROM ( SELECT
+       comuna,
+       tipo_transporte,
+       cantidad_pedidos,
+       ROW_NUMBER() OVER (PARTITION BY comuna ORDER BY cantidad_pedidos DESC) AS rango
+       FROM ( SELECT Dir.comuna, RT.tipo AS tipo_transporte,
+       COUNT(*) AS cantidad_pedidos
+       FROM Pedido Ped
+       INNER JOIN Cliente Cli ON Ped.rut_cli = Cli.RUT_cli
+       INNER JOIN Repartidor Rep ON Ped.rut_rep = Rep.RUT_rep
+       INNER JOIN Medio_transporte RT ON Rep.id_transporte = RT.ID_transporte
+       INNER JOIN Direccion Dir ON Cli.id_direccion = Dir.ID_direccion
+       GROUP BY Dir.comuna, RT.tipo ) AS contar_transporte
+    ) AS rango_transporte
+WHERE
+    rango = 1;
+
+---- sentencia 4
 
 SELECT
 --Realizamos extraccion para crear columna de los siguientes datos
@@ -55,6 +74,16 @@ ORDER BY
     EXTRACT(YEAR FROM Ped.fecha_pedido),
     EXTRACT(MONTH FROM Ped.fecha_pedido),
     despachosMensuales DESC;
+
+
+---- sentencia 8
+SELECT C.nombre_compañia, SUM(p.precio_unitario) AS ingresos_totales
+FROM Compañia AS C
+JOIN Producto AS P ON C.RUT_compañia = P.rut_compañia
+JOIN Venta_producto AS VP ON P.id_producto = VP.id_producto
+GROUP BY C.nombre_compañia
+ORDER BY SUM(p.precio_unitario) DESC
+
 
 -- 9
 SELECT sub.RUT_rep, comuna, tipo
