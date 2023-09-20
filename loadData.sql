@@ -1,3 +1,30 @@
+-- Reiniciar la secuencia de Direccion
+ALTER SEQUENCE Direccion_ID_direccion RESTART WITH 1;
+
+-- Reiniciar la secuencia de Medio_transporte
+ALTER SEQUENCE Medio_transporte_ID_transporte RESTART WITH 1;
+
+-- Reiniciar la secuencia de Repartidor
+ALTER SEQUENCE Repartidor_RUT_rep_seq RESTART WITH 1;
+
+-- Reiniciar la secuencia de Compañia
+ALTER SEQUENCE Compañia_RUT_compañia_seq RESTART WITH 1;
+
+-- Reiniciar la secuencia de Cliente
+ALTER SEQUENCE Cliente_RUT_cli_seq RESTART WITH 1;
+
+-- Reiniciar la secuencia de Pedido
+ALTER SEQUENCE Pedido_ID_pedido_seq RESTART WITH 1;
+
+-- Reiniciar la secuencia de Producto
+ALTER SEQUENCE Producto_ID_producto_seq RESTART WITH 1;
+
+-- Reiniciar la secuencia de Venta_detalle
+ALTER SEQUENCE Venta_detalle_ID_venta_seq RESTART WITH 1;
+
+-- Reiniciar la secuencia de Venta_producto
+ALTER SEQUENCE Venta_producto_ID_VP_seq RESTART WITH 1;
+
 -- POBLADO DIRECCIONES ---------------------------------
 INSERT INTO public.Direccion(region, comuna, calle, numero, referencia) VALUES ('Arica y Parinacota','Arica','21 de Mayo',346,'Casa esquina'); --1
 INSERT INTO public.Direccion(region, comuna, calle, numero, casa_dpto, referencia) VALUES ('Tarapacá','Iquique','Baquedano',4537,25,'Condominio iquique'); --2
