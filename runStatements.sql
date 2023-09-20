@@ -1,3 +1,38 @@
+---- sentencia 1
+SELECT DISTINCT ON (aux.nombre_compañia)
+aux.rut_cli,
+aux.nombre_compañia,
+COUNT () AS cantidad_pedidos
+FROM (SELECT  DISTINCT ON (P.id_pedido) 
+    FROM
+        Pedido AS P
+        INNER JOIN Venta_detalle AS VD ON P.ID_pedido = VD.id_pedido
+        INNER JOIN Venta_producto AS VP ON VD.ID_venta = VP.id_venta
+        INNER JOIN Producto AS Pr ON VP.id_producto = Pr.ID_producto
+        INNER JOIN Compañia AS C ON Pr.rut_compañia = C.RUT_compañia
+        ORDER BY
+    P.id_pedido) AS aux
+GROUP BY
+    aux.nombre_compañia,
+    aux.rut_cli
+ORDER BY
+    aux.nombre_compañia,
+    cantidad_pedidos DESC;
+---- sentencia 2
+SELECT DISTINCT ON (C.nombre_compañia)
+    C.nombre_compañia,
+    Pr.nombre_prod,
+    COUNT(*) AS cantidad_ventas
+FROM
+    Venta_producto AS VP
+    INNER JOIN Producto AS Pr ON VP.id_producto = Pr.ID_producto
+    INNER JOIN Compañia AS C ON Pr.rut_compañia = C.RUT_compañia
+GROUP BY
+    C.nombre_compañia,
+    Pr.nombre_prod
+ORDER BY
+    C.nombre_compañia,
+    cantidad_ventas;
 ---- sentencia 3
 SELECT comuna, tipo_transporte AS transporte_mas_usado, cantidad_pedidos
 FROM ( SELECT
