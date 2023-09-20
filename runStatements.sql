@@ -128,8 +128,11 @@ SELECT C.nombre_compañia, SUM(p.precio_unitario) AS ingresos_totales
 FROM Compañia AS C
 JOIN Producto AS P ON C.RUT_compañia = P.rut_compañia
 JOIN Venta_producto AS VP ON P.id_producto = VP.id_producto
+JOIN Venta_detalle AS VD ON VP.id_venta = VD.ID_venta
+JOIN Pedido AS Pe ON VD.id_pedido = Pe.ID_pedido
+WHERE DATE_TRUNC('year', Pe.fecha_pedido) = DATE_TRUNC('year', CURRENT_DATE - INTERVAL '1 year')
 GROUP BY C.nombre_compañia
-ORDER BY SUM(p.precio_unitario) DESC
+ORDER BY SUM(p.precio_unitario) DESC;
 
 
 -- sentencia 9
