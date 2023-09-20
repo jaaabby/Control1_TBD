@@ -94,12 +94,14 @@ INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2023/09/
 INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2023/04/26'::date,8990,'20185746-2','15982134-6'); --3
 INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2020/11/08'::date,22300,'17631894-k','18236795-8'); --4
 INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2023/06/07'::date,6900,'20185746-2','19384383-6'); --5
-INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2020/05/20'::date,5990,'18892837-7','28938482-8'); --6
-INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2019/09/15'::date,16400,'10765644-7','21837463-0'); --7
-INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2021/04/16'::date,8990,'20185746-2','10993782-0'); --8
-INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2022/12/08'::date,25300,'19842136-0','11928463-5'); --9
-INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2023/06/07'::date,6700,'16321459-8','15831313-2'); --10
-INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2022/05/20'::date,5290,'12773829-1','12375647-1'); --11
+
+INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2020/05/20'::date,10870,'18892837-7','28938482-8'); --6
+INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2019/09/15'::date,17780,'10765644-7','21837463-0'); --7
+INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2021/04/16'::date,7870,'20185746-2','10993782-0'); --8
+INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2022/12/08'::date,11580,'19842136-0','11928463-5'); --9
+INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2023/06/07'::date,3570,'16321459-8','15831313-2'); --10
+INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2022/05/20'::date,8290,'12773829-1','12375647-1'); --11
+
 INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2021/09/15'::date,12400,'16987451-2','17664556-2'); --12
 INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2020/04/26'::date,18990,'17631894-k','19384383-6'); --13
 INSERT INTO public.Pedido(fecha_pedido,precio,rut_rep,rut_cli) VALUES ('2019/11/08'::date,12400,'20185746-2','21837463-0'); --14
@@ -149,12 +151,12 @@ INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (15400,2); --2
 INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (8990,3); --3
 INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (22300,4); --4
 INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (6900,5); --5
-INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (5990,6); --6
-INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (16400,7); --7
-INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (8990,8); --8
-INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (25300,9); --9
-INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (6700,10); --10
-INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (5290,11); --11
+INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (10870,6); --6
+INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (17780,7); --7
+INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (7870,8); --8
+INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (11580,9); --9
+INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (3570,10); --10
+INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (8290,11); --11
 INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (12400,12); --12
 INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (18990,13); --13
 INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (12400,14); --14
@@ -163,3 +165,19 @@ INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (6900,15); --15
 -- POBLADO VENTA-PRODUCTO --------------------------------- REVISAR Y COMPLETAR
 INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (1,1);
 INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (2,1);
+
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (1,6);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (3,6);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (4,6);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (7,7);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (7,7);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (12,8);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (13,8);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (16,8);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (20,9);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (21,9);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (26,10);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (26,10);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (26,10);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (14,11);
+
