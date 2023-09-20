@@ -82,6 +82,17 @@ ORDER BY
     EXTRACT(MONTH FROM fecha_pedido),
     pedidosMes DESC;
 
+-- 6) pedido diario con más productos del último mes
+select max(numProductos) as numMaxProductos
+from 
+    (select count(pedido.id_pedido) as numProductos
+    from pedido natural join venta_detalle natural join venta_producto
+    where DATE_PART('month', pedido.fecha_pedido) = DATE_PART('month', NOW()) and DATE_PART('year', pedido.fecha_pedido) = DATE_PART('year', NOW())
+    group by pedido.fecha_pedido)
+as sentencia6
+
+
+
 --sentencia 7
 SELECT
 --Realizamos extraccion para crear columna de los siguientes datos
@@ -120,7 +131,7 @@ GROUP BY C.nombre_compañia
 ORDER BY SUM(p.precio_unitario) DESC
 
 
--- 9
+-- sentencia 9
 SELECT sub.RUT_rep, comuna, tipo
 FROM (SELECT r.RUT_rep, tipo
 	FROM Medio_transporte as mt
@@ -130,3 +141,10 @@ JOIN Pedido as p ON sub.RUT_rep = p.rut_rep
 JOIN Cliente as c ON p.rut_cli = c.RUT_cli
 JOIN Direccion as d ON c.id_direccion = d.ID_direccion
 WHERE comuna = 'Santiago' OR comuna = 'Providencia'
+
+-- 10) lista de clientes que ha gastado más en el mes pasado
+select cliente.nombre_cli, sum(precio_total) as total
+from cliente inner join pedido on cliente.RUT_cli=pedido.rut_cli natural join venta_detalle 
+where DATE_PART('month', pedido.fecha_pedido) = DATE_PART('month', NOW() - Interval '1 month')
+group by cliente.nombre_cli
+order by total desc
