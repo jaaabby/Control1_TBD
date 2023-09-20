@@ -1,3 +1,4 @@
+
 -- POBLADO DIRECCIONES ---------------------------------
 INSERT INTO public.Direccion(region, comuna, calle, numero, referencia) VALUES ('Arica y Parinacota','Arica','21 de Mayo',346,'Casa esquina'); --1
 INSERT INTO public.Direccion(region, comuna, calle, numero, casa_dpto, referencia) VALUES ('Tarapacá','Iquique','Baquedano',4537,25,'Condominio iquique'); --2
@@ -155,14 +156,16 @@ INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (8990,8); --8
 INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (25300,9); --9
 INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (6700,10); --10
 INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (5290,11); --11
-INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (12400,12); --12
-INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (18990,13); --13
-INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (12400,14); --14
-INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (6900,15); --15
+INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (15760,12); --12
+INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (5590,13); --13
+INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (12650,14); --14
+INSERT INTO public.Venta_detalle(precio_total,id_pedido) VALUES (5420,15); --15
+
 
 -- POBLADO VENTA-PRODUCTO --------------------------------- REVISAR Y COMPLETAR
 INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (1,1);
 INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (2,1);
+<<<<<<< HEAD
 INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (19,2);
 INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (21,2);
 INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (22,3);
@@ -176,3 +179,19 @@ INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (11,4);
 INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (3,5);
 INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (5,5);
 INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (20,6);
+=======
+
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (2,12);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (4,12);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (4,12);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (5,12);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (20,13);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (12,14);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (13,14);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (14,14);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (15,14);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (16,14);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (22,15);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (24,15);
+INSERT INTO public.Venta_producto(id_producto,id_venta) VALUES (26,15);
+>>>>>>> 959abe6731464e87333bd8bf2ab6af5ff8f03135
