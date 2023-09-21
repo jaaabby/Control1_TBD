@@ -178,3 +178,5 @@ from cliente inner join pedido on cliente.RUT_cli=pedido.rut_cli natural join ve
 where DATE_PART('month', pedido.fecha_pedido) = DATE_PART('month', NOW() - Interval '1 month')
 group by cliente.nombre_cli
 order by total desc
+
+--(sacar  {- Interval '1 month' - linea 178} para simular mes actual)
