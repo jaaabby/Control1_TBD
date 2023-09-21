@@ -15,7 +15,7 @@ CREATE TABLE Medio_transporte
 (
     	ID_transporte serial PRIMARY KEY,
     	tipo varchar(80) NOT NULL,
-    	patente varchar(6) unique
+    	patente varchar(8) unique
 );
 
 -- Tabla Repartidor
