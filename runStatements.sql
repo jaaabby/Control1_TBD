@@ -83,6 +83,32 @@ ORDER BY
     EXTRACT(MONTH FROM fecha_pedido),
     pedidosMes DESC;
 
+-- Sentencia 5
+
+    SELECT nombre_compañia, mo, yr, p.rut_cli, maxm
+    FROM Pedido as P
+    JOIN	(SELECT sums.nombre_compañia, sums.mo, sums.yr, MAX(sums.suma) AS maxm
+    		FROM (SELECT
+    			aux.rut_cli,
+    			aux.nombre_compañia,
+    			SUM(aux.precio) AS suma,
+    			EXTRACT(Month FROM aux.fecha_pedido) AS mo,
+    			EXTRACT(Year FROM aux.fecha_pedido) AS yr
+    		FROM (SELECT  DISTINCT ON (P.id_pedido) *
+    			FROM
+    				Pedido AS P
+    				INNER JOIN Venta_detalle AS VD ON P.ID_pedido = VD.id_pedido
+    				INNER JOIN Venta_producto AS VP ON VD.ID_venta = VP.id_venta
+    				INNER JOIN Producto AS Pr ON VP.id_producto = Pr.ID_producto
+    				INNER JOIN Compañia AS C ON Pr.rut_compañia = C.RUT_compañia
+    				ORDER BY
+    			P.id_pedido) AS aux
+    		GROUP BY aux.nombre_compañia, mo, yr, aux.rut_cli) AS sums
+    GROUP BY sums.nombre_compañia,sums.yr,sums.mo) AS outp ON outp.yr = EXTRACT(Year FROM p.fecha_pedido)
+    														AND outp.mo = EXTRACT(Month FROM p.fecha_pedido)
+    														AND outp.maxm = p.precio
+    ORDER BY nombre_compañia,yr,mo
+
 -- 6) pedido diario con más productos del último mes
 select max(numProductos) as numMaxProductos
 from 
